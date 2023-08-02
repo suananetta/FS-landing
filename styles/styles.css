@@ -1,0 +1,234 @@
+:root {
+    --dark-gray: #2E323F;
+    --bg-light-gray: #3B4050;
+    --bg-light: #F1F1F1;
+    --side-color: #A59678;
+}
+
+body {
+    color: var(--dark-gray);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+header {
+    padding: 32px 64px;
+    background-color: var(--dark-gray);
+    display: flex;
+    justify-content: flex-end;
+}
+main {
+    height: 100%;
+}
+footer {
+    padding: 96px 64px 0px;
+    background-color: var(--dark-gray);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+h1, h2, h3, h4 {
+    margin: 0;
+}
+h1 {
+    flex: 0 1 40%;
+    padding: 64px 0;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 72px;
+}
+h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+}
+h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--side-color)
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+button {
+    padding: 8px 24px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+button:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+    transition: 0.3s;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 64px;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.header-nav-item:not(:last-child) {
+    margin-right: 32px;
+}
+.sec-introdaction {
+    background-color: var(--bg-light-gray);
+    color: #F1F1F1;
+}
+.introdaction-item {
+    flex: 0 1 30%;
+    display: flex;
+    flex-direction: column;
+}
+.introdaction-btn {
+    width: 50%;
+    margin-top: 24px;
+    color: white;
+    background-color: var(--side-color);
+    border: 0;
+    border-radius: 16px;
+}
+.sec-advantages {
+    background-color: var(--bg-light);
+}
+.advantages-item {
+    flex: 0 1 25%;
+    text-align: center;
+}
+.advantages-title {
+    color: var(--side-color);
+}
+.possibilities-main {
+    flex: 0 1 65%;
+}
+.possibilities-main p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+.possibilities-title {
+    color: var(--side-color);
+}
+.possibilities-img {
+    width: 100%;
+    margin: 48px 0;
+}
+.possibilities-options {
+    flex: 0 1 25%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: flex-start;
+}
+.options-item {
+    padding: 32px;
+    background-color: var(--dark-gray);
+    color: white;
+    text-align: center;
+}
+.options-item:not(:last-child) {
+    margin-bottom: 24px;
+}
+.info-block {
+    display: flex;
+    justify-content: space-between;
+}
+.info-block-item {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.info-block-item:not(:first-child) {
+    flex: 0 1 10%;
+}
+.info-block-item:first-child {
+    flex: 0 1 32%;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    h1 {
+        flex: 0 1 100%;
+    }
+    .introdaction-item {
+        flex: 0 1 70%;
+    }
+    .possibilities-main {
+        flex: 0 1 100%;
+    }
+    .possibilities-options {
+        flex: 0 0 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .options-item:not(:last-child) {
+        margin-bottom: 0px;
+        margin-right: 24px;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 1023px){
+    .container {
+        min-width: 312px;
+        padding: 24px;
+    }
+    header {
+        padding: 16px 24px;
+        justify-content: center;
+    }
+    footer {
+        padding: 72px 0px;
+    }
+    h1 {
+        flex: 0 1 100%;
+        padding: 24px 0;
+        font-size: 32px;
+        line-height: 48px;
+    }
+    h2 {
+        margin-bottom: 40px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+    h3 {
+        padding-top: 24px;
+    }
+    .introdaction-item {
+        flex: 0 1 100%;
+    }
+    .introdaction-btn {
+        width: 50%;
+    }
+    .advantages-item {
+        flex: 0 1 100%;
+    }
+    .possibilities-main {
+        flex: 0 1 100%;
+    }
+    .possibilities-options {
+        flex: 0 1 100%;
+    }
+    .info-block {
+        flex-direction: column;
+    }
+    .info-block-item:not(:last-child) {
+        margin-bottom: 32px;
+    }
+    .info-block-item a {
+        margin-top: 12px;
+    }
+}
